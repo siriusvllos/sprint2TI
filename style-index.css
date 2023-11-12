@@ -1,11 +1,12 @@
 body {
+    display: initial;
     margin: 0px;
     padding: 0px;
-    background: #FFF;
+    background: #f9f9f9;
 }
 #container {
     width: 100%;
-    min-width: 940px;
+    min-width: 1040px;
     margin: auto;
 }
 /* --- // header // --- */
@@ -15,10 +16,15 @@ header {
     justify-content: space-between;
     align-items: center;
     font-family: 'Tilt Neon', sans-serif;
-    
+
+    z-index: 1;
+    position: sticky;
+    top: 0px;
+    width:inherit;
     height: 121px;
 
-    background-color: #19747E;
+    background-color: #758467;
+    background-image: linear-gradient(to bottom right, #3A5A40, #758467, #A3B18A);
 }
 #logo {
     display: flex;
@@ -68,28 +74,34 @@ header {
     justify-content: center;
     align-items: center;
 }
-
-/* --- // main // --- */
+/*--main--*/
 main {
     font-family: 'Jost', sans-serif;
+
+    position: relative;
 
     display: flex;
     align-items: center;
     flex-direction: column;
-    min-width: 1440px;
+    width: 100%;
     min-height: 700px;
+    height: fit-content;
 
-    margin-top: 30px;
-    margin-bottom: 20px;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 #content {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
+    gap: 15px;
 }
 .article-box {
     background-color: #EAEFD3;
+    border-style: solid;
+    border-color:#758467;
+    border-width: 2px;
     padding: 15px;
     display: flex;
     flex-wrap: wrap;
@@ -97,23 +109,37 @@ main {
     align-items:start;
     text-decoration: none;
 
-    width: 90%;
+    width: 60%;
     height: fit-content;
+}
+.imagem {
+    background-color: rebeccapurple;
+    align-self: center;
+    object-fit: cover;
+    width: 1000px;
+    height: 500px;
 }
 .up {
     display: flex;
     flex-wrap: no-wrap;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items:center;
     width: 100%;
     height: 60px;
 }
 .titulo {
-    color: #19747E;
-    font-size: 45px;
-    text-decoration: underline #19747E 3px;
+    color: #758467;
+    font-size: 55px;
+    text-decoration: underline #758467 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 
+}
+.txt-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .categoria {
     color: #000;
@@ -125,10 +151,8 @@ main {
     font-size: 25px;
     font-style: normal;
     font-weight: 400;
-
 }
-
-/* --- // footer // --- */
+/*-FOOTER--*/
 footer {
     display: flex;
     align-items: center;
@@ -137,7 +161,7 @@ footer {
 
     padding-left: 150px;
 
-    background-color: #19747E;
+    background-color: #758467;
     color: #FFF;
 }
 .textbox {
